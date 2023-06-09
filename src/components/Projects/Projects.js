@@ -1,4 +1,4 @@
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
+import { Col, Container, Row, Tab } from "react-bootstrap";
 // import projImg1 from "../../assets/img/project-img1.png";
 // import projImg2 from "../../assets/img/project-img2.png";
 // import projImg3 from "../../assets/img/project-img3.png";
@@ -53,7 +53,7 @@ const Projects = () => {
               )}
             </TrackVisibility>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav
+              {/* <Nav
                 variant="pills"
                 className="nav-pills mb-5 justify-content-center align-items-center"
                 id="pills-tab"
@@ -67,16 +67,21 @@ const Projects = () => {
                 <Nav.Item>
                   <Nav.Link eventKey="third">Tab Third</Nav.Link>
                 </Nav.Item>
-              </Nav>
+              </Nav> */}
               <Tab.Content>
-                <Tab.Pane eventKey="first">
+                <Row>
+                  {project.map((project, index) => {
+                    return <ProjectCard key={index} {...project} />;
+                  })}
+                </Row>
+                {/* <Tab.Pane eventKey="first">
                   <Row>
                     {project.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="second">
+                </Tab.Pane> */}
+                {/* <Tab.Pane eventKey="second">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Cumque quam, quod neque provident velit, rem explicabo
@@ -91,7 +96,7 @@ const Projects = () => {
                     excepturi id illo molestiae blanditiis, eligendi dicta
                     officiis asperiores delectus quasi inventore debitis quo.
                   </p>
-                </Tab.Pane>
+                </Tab.Pane> */}
               </Tab.Content>
             </Tab.Container>
           </Col>
