@@ -2,7 +2,7 @@ import { Col, Container, Row, Tab } from "react-bootstrap";
 // import projImg1 from "../../assets/img/project-img1.png";
 // import projImg2 from "../../assets/img/project-img2.png";
 // import projImg3 from "../../assets/img/project-img3.png";
-import projImg4 from "../../assets/img/LMS.jpg";
+import projImg4 from "../../assets/img/mern-lms.png";
 import projImg5 from "../../assets/img/PAP.jpg";
 import projImg6 from "../../assets/img/FRA.jpg";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
