@@ -39,10 +39,7 @@ const Skills = () => {
                 Express.js, React.js, Node.js) stack, I possess a diverse range
                 of skills. With expertise in both front-end and back-end
                 development, I excel in crafting robust and scalable web
-                applications. My proficiency includes designing responsive user
-                interfaces, implementing complex functionality, optimizing
-                database performance, and ensuring seamless integration between
-                server and client components. With a strong problem-solving
+                applications. With a strong problem-solving
                 aptitude and a passion for delivering high-quality solutions, I
                 am well-equipped to tackle the challenges of modern web
                 development.

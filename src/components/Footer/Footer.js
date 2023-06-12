@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import logo from "../../assets/img/logo.svg";
+// import logo from "../../assets/img/logo.svg";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 // import navIcon2 from "../../assets/img/nav-icon2.svg";
 // import navIcon3 from "../../assets/img/nav-icon3.svg";
@@ -11,12 +11,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-item-center">
+        <Row className="align-item-center justify-content-center">
           <MailchimpForm />
-          <Col size={12} sm={6}>
+          {/* <Col size={12} sm={6}>
             <img src={logo} alt="logo" />
-          </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+            <h1 style={{color: "white", fontFamily: "monospace"}}>Jk</h1>
+          </Col> */}
+          <Col size={12} sm={6} className="text-center">
             <div className="social-icon">
               <a
                 rel="noreferrer"
