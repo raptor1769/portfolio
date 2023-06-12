@@ -2,9 +2,16 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Skills.css";
 import { Col, Container, Row } from "react-bootstrap";
-import meter1 from "../../assets/img/meter1.svg";
-import meter2 from "../../assets/img/meter2.svg";
-import meter3 from "../../assets/img/meter3.svg";
+import htmlPic from "../../assets/img/html.png";
+import chakraPic from "../../assets/img/chakra.png";
+import cssPic from "../../assets/img/CSS.png";
+import bootstrapPic from "../../assets/img/bootstrap.png";
+import expressPic from "../../assets/img/express.png";
+import jsPic from "../../assets/img/javascript.jpg";
+import materialPic from "../../assets/img/material.png";
+import mongoPic from "../../assets/img/mongo.png";
+import nodePic from "../../assets/img/node.png";
+import reactPic from "../../assets/img/react.png";
 import colorSharp from "../../assets/img/color-sharp.png";
 
 const Skills = () => {
@@ -30,48 +37,38 @@ const Skills = () => {
   return (
     <section className="skill" id="skills">
       <Container>
-        <Row>
-          <Col>
-            <div className="skill-bx">
-              <h2>Skills</h2>
-              <p>
-                As a full-stack developer specialized in the MERN (MongoDB,
-                Express.js, React.js, Node.js) stack, I possess a diverse range
-                of skills. With expertise in both front-end and back-end
-                development, I excel in crafting robust and scalable web
-                applications. My proficiency includes designing responsive user
-                interfaces, implementing complex functionality, optimizing
-                database performance, and ensuring seamless integration between
-                server and client components. With a strong problem-solving
-                aptitude and a passion for delivering high-quality solutions, I
-                am well-equipped to tackle the challenges of modern web
-                development.
-              </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="skill-slider"
-              >
-                <div className="item">
-                  <img src={meter1} alt="Skill 1" />
-                  <h5>React JS</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="Skill 2" />
-                  <h5>Mongo DB</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="Skill 3" />
-                  <h5>Express JS</h5>
-                </div>
-                <div className="item">
-                  <img src={meter1} alt="Skill 4" />
-                  <h5>Node JS</h5>
-                </div>
-              </Carousel>
-            </div>
-          </Col>
-        </Row>
+        <div className="skill-bx grid-container">
+          <div className="grid-item item-1">
+            <img src={htmlPic} alt="html-logo" />
+          </div>
+          <div className="grid-item item-2">
+            <img src={cssPic} alt="css-logo" />
+          </div>
+          <div className="grid-item item-3">
+            <img src={jsPic} alt="js-logo" />
+          </div>
+          <div className="grid-item item-4">
+            <img src={bootstrapPic} alt="bootstrap-logo" />
+          </div>
+          <div className="grid-item item-5">
+            <img src={nodePic} alt="node-logo" />
+          </div>
+          <div className="grid-item item-6">
+            <img src={reactPic} alt="react-logo" />
+          </div>
+          <div className="grid-item item-7">
+            <img src={chakraPic} alt="chakra-logo" />
+          </div>
+          <div className="grid-item item-8">
+            <img src={mongoPic} alt="mongo-logo" />
+          </div>
+          <div className="grid-item item-9">
+            <img src={expressPic} alt="express-logo" />
+          </div>
+          <div className="grid-item item-10">
+            <img src={materialPic} alt="material-ui-logo" />
+          </div>
+        </div>
       </Container>
       <img src={colorSharp} alt="" className="background-image-left" />
     </section>
