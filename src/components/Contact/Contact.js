@@ -98,9 +98,10 @@ const Contact = () => {
                     required
                   />
                 </Col>
-                <Col>
+                <Col style={{ padding: "4px" }}>
                   <textarea
                     row="6"
+                    style={{ resize: "none" }}
                     value={formDetails.message}
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
