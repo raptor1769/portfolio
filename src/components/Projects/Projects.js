@@ -69,7 +69,7 @@ const Projects = () => {
                 </Nav.Item>
               </Nav> */}
               <Tab.Content>
-                <Row>
+                <Row className="justify-content-center">
                   {project.map((project, index) => {
                     return <ProjectCard key={index} {...project} />;
                   })}

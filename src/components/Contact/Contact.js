@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Contact.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import contactImg from "../../assets/img/contact-img.svg";
-// import axios from "axios";
+import axios from "axios";
 
 const Contact = () => {
   const formInitialDetails = {
@@ -14,7 +14,7 @@ const Contact = () => {
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  // const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({success: "", message: ""});
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -28,32 +28,33 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    // let response = await axios.post(
-    //   `${process.env.REACT_APP_BACKEND}/contact`,
-    //   JSON.stringify(formDetails),
-    //   {
-    //     headers: {
-    //       "Content-Type": "Application/json;charset=utf-8",
-    //     },
-    //   }
-    // );
+    let response = await axios.post(
+      `${process.env.REACT_APP_BACKEND}/contact`,
+      JSON.stringify(formDetails),
+      {
+        headers: {
+          "Content-Type": "Application/json;charset=utf-8",
+        },
+      }
+    );
     setButtonText("Send");
 
     // console.log(response);
-    // setFormDetails(formInitialDetails);
-    // if (response.status === 200) {
-    //   setStatus({ success: true, message: "Message sent successfully" });
-    // } else {
-    //   setStatus({
-    //     success: false,
-    //     message: "Something went wrong, please try again later",
-    //   });
-    // }
+    setFormDetails(formInitialDetails);
+    if (response.status === 200) {
+      setStatus({ success: "success", message: "Message sent successfully" });
+    } else {
+      setStatus({
+        success: "warning",
+        message: "Something went wrong, please try again later",
+      });
+    }
   };
 
   return (
     <section className="contact" id="connect">
       <Container>
+      <Alert variant={status.success}>{status.message}</Alert>
         <Row className="align-items-center">
           <Col md={6}>
             <img src={contactImg} alt="contact us" />
@@ -107,7 +108,7 @@ const Contact = () => {
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                     required
                   />
-                  <button type="submit">
+                  <button type="submit" disabled title="Currently disabled">
                     <span>{buttonText}</span>
                   </button>
                 </Col>

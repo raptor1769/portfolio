@@ -5,14 +5,14 @@ import navIcon1 from "../../assets/img/nav-icon1.svg";
 // import navIcon3 from "../../assets/img/nav-icon3.svg";
 import navIcon4 from "../../assets/img/github.svg";
 import "./Footer.css";
-import MailchimpForm from "../MailchimpForm";
+// import MailchimpForm from "../MailchimpForm";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-item-center justify-content-center">
-          <MailchimpForm />
+        <Row className="align-item-center justify-content-center footer-flex">
+          {/* <MailchimpForm /> */}
           {/* <Col size={12} sm={6}>
             <img src={logo} alt="logo" />
             <h1 style={{color: "white", fontFamily: "monospace"}}>Jk</h1>

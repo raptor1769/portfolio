@@ -65,10 +65,11 @@
 }
 
 .contact form button:hover {
-    color: #fff;
+    /* color: #fff; */
+    cursor: not-allowed;
 }
 
-.contact form button::before {
+/* .contact form button::before {
     content: "";
     background: #121212;
     width: 0;
@@ -78,7 +79,7 @@
     left: 0;
     z-index: 0;
     transition: 0.3s ease-in-out;
-}
+} */
 
 .contact form button:hover::before {
     width: 100%;
