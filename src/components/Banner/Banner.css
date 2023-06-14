@@ -82,16 +82,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 180px;
 }
 
 /* .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 } */
 
-
-@media (max-width:350px) {
-    .banner h1 {
-      font-size: 50px;
-    }
+@media (max-width: 350px) {
+  .banner h1 {
+    font-size: 50px;
   }
+}
+
+@media (max-width: 992px) {
+  .banner {
+    padding-top: 200px;
+  }
+}

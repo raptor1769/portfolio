@@ -11,12 +11,12 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = () => {
-    const contactSection = document.getElementById("connect");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const handleScroll = () => {
+  //   const contactSection = document.getElementById("connect");
+  //   if (contactSection) {
+  //     contactSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   useEffect(() => {
     const onScroll = () => {
@@ -93,9 +93,9 @@ const NavBar = () => {
                 <img src={navIcon4} alt="github" />{" "}
               </a>
             </div>
-            <button className="vvd" onClick={handleScroll}>
+            {/* <button className="vvd" onClick={handleScroll}>
               Let's connect
-            </button>
+            </button> */}
           </span>
         </Navbar.Collapse>
       </Container>
