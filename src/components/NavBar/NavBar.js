@@ -86,7 +86,7 @@ const NavBar = () => {
               </a> */}
               <a
                 rel="noreferrer"
-                href="https://github.com/jrk1769"
+                href="https://github.com/raptor1769"
                 target="_blank"
               >
                 {" "}
